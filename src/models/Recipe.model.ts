@@ -29,6 +29,7 @@ export const ingredientSchema = new Schema<IIngredient>(
 )
 
 export interface IRecipe {
+    _id: Types.ObjectId;
     name: string,
     description: string,
     cookingTimeInMinutes: number,

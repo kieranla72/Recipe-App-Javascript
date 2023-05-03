@@ -1,4 +1,4 @@
-import mongoose, { HydratedDocument, Model, Mongoose, QueryWithHelpers, SaveOptions, Types } from 'mongoose';
+import mongoose, { Types } from 'mongoose';
 
 export interface IIngredient {
     name: string,
