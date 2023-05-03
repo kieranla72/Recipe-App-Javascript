@@ -8,6 +8,10 @@ export const connect = async (_: any, __: any, next: NextFunction) => {
     if (!mongoConnection) {
         mongoConnection = await mongoose.connect('mongodb://127.0.0.1:27017/test');
     }
+
+    mongoose.connection.on('disconnected', err => {
+        console.log('Connection was disconnected')
+    })
+
     next();
-    return mongoConnection;
 }
