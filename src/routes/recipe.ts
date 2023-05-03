@@ -37,7 +37,7 @@ recipeRouter.post('/recipe/:id', async(req: Request<any, any, IRecipe>, res: Res
     }
 })
 
-recipeRouter.get('/recipes', async(req: Request, res: Response, next: NextFunction) => {
+recipeRouter.get('/recipes', async(_: Request, res: Response, next: NextFunction) => {
 
     try {
         const recipes = await getRecipes();
